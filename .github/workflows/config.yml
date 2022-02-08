@@ -23,7 +23,7 @@ jobs:
       - name: Install pip and requirements
         run: |
           pip install --upgrade pip
-          pip install -r ${GITHUB_WORKSPACE}/repository/requirements.txt
+          pip install -r ${GITHUB_WORKSPACE}/demo-xsoar-content-repo/requirements.txt
       - name: Prepare Environment
         env:
           REF: ${{ github.ref }}
