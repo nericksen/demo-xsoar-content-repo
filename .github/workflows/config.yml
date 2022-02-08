@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: nericksen/demo-xsoar-content-repo
-          path: demo-xsoar-content-repo
+          path: repository
           fetch-depth: 0
       - name: Content checkout
         uses: actions/checkout@v2
@@ -23,7 +23,7 @@ jobs:
       - name: Install pip and requirements
         run: |
           pip install --upgrade pip
-          pip install -r ${GITHUB_WORKSPACE}/demo-xsoar-content-repo/requirements.txt
+          pip install -r ${GITHUB_WORKSPACE}/repository/requirements.txt
       - name: Prepare Environment
         env:
           REF: ${{ github.ref }}
@@ -80,7 +80,7 @@ jobs:
             echo $(ls)
             echo $(pwd)
             echo $ARTIFACTS_FOLDER
-            mkdir $ARTIFACTS_FOLDER
+            mkdir -p $ARTIFACTS_FOLDER
             cp ./Tests/id_set.json $ARTIFACTS_FOLDER/
           else
             echo "No packs has changed, skipping step."
