@@ -1,0 +1,67 @@
+{
+    "scripts": [],
+    "playbooks": [
+        {
+            "72a32ae6-9fbf-424c-872a-cf3dce4f7238": {
+                "name": "Linux Network Troubleshooting v2",
+                "file_path": "Packs/NetOps/Playbooks/Linux_Network_Troubleshooting.yml",
+                "source": [
+                    "github.com",
+                    "nericksen",
+                    "demo-xsoar-content-repo"
+                ],
+                "pack": "NetOps",
+                "command_to_integration": {
+                    "Ping": "Ping",
+                    "netmiko-cmds": "",
+                    "FileCreateAndUpload": "FileCreateAndUpload"
+                }
+            }
+        }
+    ],
+    "integrations": [],
+    "TestPlaybooks": [],
+    "Classifiers": [],
+    "IncidentFields": [],
+    "IncidentTypes": [],
+    "IndicatorFields": [],
+    "IndicatorTypes": [],
+    "Lists": [],
+    "Jobs": [],
+    "Mappers": [],
+    "Packs": {
+        "NetOps": {
+            "name": "Net Ops",
+            "current_version": "1.0.0",
+            "source": [
+                "github.com",
+                "nericksen",
+                "demo-xsoar-content-repo"
+            ],
+            "author": "ne",
+            "certification": "",
+            "tags": [],
+            "use_cases": [],
+            "categories": [
+                "Utilities"
+            ],
+            "marketplaces": [
+                "xsoar",
+                "marketplacev2"
+            ],
+            "ContentItems": {
+                "playbooks": [
+                    "72a32ae6-9fbf-424c-872a-cf3dce4f7238"
+                ]
+            }
+        }
+    },
+    "GenericTypes": [],
+    "GenericFields": [],
+    "GenericModules": [],
+    "GenericDefinitions": [],
+    "Layouts": [],
+    "Reports": [],
+    "Widgets": [],
+    "Dashboards": []
+}
