@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: nericksen/demo-xsoar-content-repo
-          path: demo-xsoar-content-repo
+          path: repository
           fetch-depth: 0
       - name: Content checkout
         uses: actions/checkout@v2
