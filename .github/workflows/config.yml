@@ -166,7 +166,7 @@ jobs:
             echo $(ls)
             
             ls $ARTIFACTS_FOLDER
-            sshpass -p ${SCP} scp -v -r $ARTIFACTS_FOLDER xsoar@${IP}:/mnt/xsoar-builds
+            sshpass -p ${SCP} scp -o StrictHostKeyChecking=no -v -r $ARTIFACTS_FOLDER xsoar@${IP}:/mnt/xsoar-builds
           else
             echo "No packs has changed, skipping step."
           fi
