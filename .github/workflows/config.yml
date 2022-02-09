@@ -161,10 +161,13 @@ jobs:
           #    # Upload MarketPlace Packs
           #    python3 build_related_scripts/MarketPlaceInstallerFromCICD.py --marketplace-packs-list $MARKETPLACE_PACKS_LIST
           #  fi
+            cd $GITHUB_WORKSPACE/repository/
             echo $(ls)
+            
             echo $NEW_PACKS_FOLDER
             ls $NEW_PACKS_FOLDER
-            sshpass -p ${{ secrets.SCP_PASSWORD }} scp -r $NEW_PACKS_FOLDER xsoar@${{ secrets.XSOARIP }}:/mnt/xsoar-builds
+            ls $ARTIFACTS_FOLDER
+            sshpass -p ${{ secrets.SCP_PASSWORD }} scp -r $ARTIFACTS_FOLDER xsoar@${{ secrets.XSOARIP }}:/mnt/xsoar-builds
           else
             echo "No packs has changed, skipping step."
           fi
