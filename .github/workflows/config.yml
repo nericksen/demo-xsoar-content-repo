@@ -41,7 +41,7 @@ jobs:
 
           # Copy Base pack from content to your repository. Needed for linting.
           #cp -r $GITHUB_WORKSPACE/content/Packs/Base $GITHUB_WORKSPACE/repository/Packs
-          sudo yum install sshpass -y
+          sudo apt install sshpass -y
 
       - name: Prepare Venv
         run: |
