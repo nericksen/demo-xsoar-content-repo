@@ -131,6 +131,7 @@ jobs:
         env:
           REF: ${{ github.ref }}
           SCP: ${{ secrets.SCP_PASSWORD }}
+          IP: ${{ secrets.XSOARIP }}
         run : |
           if [ $PACKS_CHANGED ]; then
           #  BRANCH_NAME=${REF#refs/heads/}
@@ -165,7 +166,7 @@ jobs:
             echo $(ls)
             
             ls $ARTIFACTS_FOLDER
-            sshpass -p ${{ secrets.SCP_PASSWORD }} scp -r $ARTIFACTS_FOLDER xsoar@${{ secrets.XSOARIP }}:/mnt/xsoar-builds
+            sshpass -p ${SCP} scp -v -r $ARTIFACTS_FOLDER xsoar@${IP}:/mnt/xsoar-builds
           else
             echo "No packs has changed, skipping step."
           fi
