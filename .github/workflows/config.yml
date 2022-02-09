@@ -164,8 +164,6 @@ jobs:
             cd $GITHUB_WORKSPACE/repository/
             echo $(ls)
             
-            echo $NEW_PACKS_FOLDER
-            ls $NEW_PACKS_FOLDER
             ls $ARTIFACTS_FOLDER
             sshpass -p ${{ secrets.SCP_PASSWORD }} scp -r $ARTIFACTS_FOLDER xsoar@${{ secrets.XSOARIP }}:/mnt/xsoar-builds
           else
